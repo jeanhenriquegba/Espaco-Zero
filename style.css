@@ -1,0 +1,137 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+    font-size: 15pt;
+}
+#jogadorimg{
+  width: 64px;
+  height: 64px
+}
+#containnerGame{
+  position: relative;
+  top:0px;
+  left:0px;
+  margin: 5px 5px 5px 5px;
+  width: 350px;
+  height: 450px;
+  background-color: #22222233;
+  background: url(imgs/fundo.png);
+  overflow: hidden;
+}
+#jogadorbox{
+  width: 64px;
+  height:64px;
+  position: absolute;
+  left:1%;
+  bottom:0px;
+  transition: all 0.2s;
+  display:block;
+}
+#controles{
+  width: 100%;
+  padding: 5px;
+  display:block;
+}
+#esquerda{
+  padding:3px;
+}
+#direita{
+  padding:3px;
+}
+#esquerda:active,#direita:active{
+  transform: scale(1.2);
+}
+#projetil{
+  position: absolute;
+  left:32px;
+  top:380px;
+  width:8px;
+  height:16px;
+  background-image: url(imgs/bala1.png);
+  transition:all 1ms;
+  animation: animatiro linear 200ms infinite;
+  display:block;
+}
+@keyframes animatiro{
+  0%{top:390px;}
+  100%{top:0px;}
+}
+#inimigo{
+  position:absolute;
+  top:20px;
+  width:64px;
+  height:64px;
+  background: url(imgs/inimigo1.png);
+  animation:;
+  display:block;
+}
+@keyframes danoinomigo{
+  0%{transform:rotate(0deg);}
+  25%{filter:blur(3px);transform:rotate(20deg)scale(1.2);}
+  50%{transform:rotate(-20deg)scale(1);}
+  100%{transform:rotate(0deg);}
+}
+#hudborda{
+  position: absolute;
+  top:10px;
+  left:81%;
+  border:1px solid #fff;
+  width: 62px;
+  height:10px;
+  display:block;
+}
+#inimigohud{
+  position: absolute;
+  background:#f00000;
+  width: 60px;
+  height: 8px;
+  transition: all 10ms;
+  display:block;
+}
+#placa{
+  position: absolute;
+  left:10px;
+  top:10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size:15px;
+  color:rgb(255,255,255);
+  background-color: #99999990;
+  padding:2px;
+  border-radius: 5px;
+  transition: all 1s;
+}
+#roundsix{
+  position: absolute;
+  top:185px;
+  left: 145px;
+  height: 64px;
+  width:64px;
+  background:;
+  display: none;
+  animation:;
+}
+@keyframes roundsix{
+  0%{transform:scale(1);}
+  50%{transform:scale(2.5);}
+  100%{transform:scale(30);}
+}
+#insigniassix{
+  position: absolute;
+  left:155px;
+  top:465px;
+  width:192px;
+  height:65px;
+  background-color: #00000049;
+  border-radius: 20px;
+  z-index:999999;
+  transition: all 1s;
+}
+#insigniassix img{
+  width: 60px;
+  margin-top: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
